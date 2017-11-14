@@ -68,6 +68,7 @@ import java.net.SocketAddress;
 import java.nio.channels.FileChannel;
 import java.util.Date;
 
+@Deprecated
 public class LoginActivity extends AppCompatActivity
         implements LoginFragment.Listener, GenerateFragment.Listener,
         GenerateReviewFragment.Listener, GenerateReviewFragment.AcceptListener, ReceiveFragment.Listener {

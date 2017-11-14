@@ -55,6 +55,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+@Deprecated
 public class LoginFragment extends Fragment implements WalletInfoAdapter.OnInteractionListener,
         View.OnClickListener {
     private static final String TAG = "LoginFragment";

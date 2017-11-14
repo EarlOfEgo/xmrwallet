@@ -44,6 +44,7 @@ public class WalletInfoAdapter extends RecyclerView.Adapter<WalletInfoAdapter.Vi
     private final SimpleDateFormat DATETIME_FORMATTER = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
     public interface OnInteractionListener {
+        //TODO rename into meaningfull name and remove not needed view
         void onInteraction(View view, WalletManager.WalletInfo item);
 
         boolean onContextInteraction(MenuItem item, WalletManager.WalletInfo infoItem);
