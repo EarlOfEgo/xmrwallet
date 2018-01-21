@@ -16,11 +16,13 @@
 
 package com.m2049r.xmrwallet.xmrto.network;
 
-import com.m2049r.xmrwallet.xmrto.api.XmrToCallback;
+import static org.junit.Assert.assertEquals;
+
 import com.m2049r.xmrwallet.xmrto.XmrToError;
 import com.m2049r.xmrwallet.xmrto.XmrToException;
 import com.m2049r.xmrwallet.xmrto.api.CreateOrder;
 import com.m2049r.xmrwallet.xmrto.api.XmrToApi;
+import com.m2049r.xmrwallet.xmrto.api.XmrToCallback;
 
 import net.jodah.concurrentunit.Waiter;
 
@@ -37,8 +39,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import okhttp3.mockwebserver.RecordedRequest;
-
-import static org.junit.Assert.assertEquals;
 
 public class XmrToApiCreateOrderTest {
 
@@ -76,7 +76,7 @@ public class XmrToApiCreateOrderTest {
         xmrToApi.createOrder(0.5, "btcsomething", mockOrderXmrToCallback);
 
         RecordedRequest request = mockWebServer.takeRequest();
-        assertEquals("POST", request.getMethod());
+        assertEquals("FAIL!", request.getMethod());
     }
 
     @Test
